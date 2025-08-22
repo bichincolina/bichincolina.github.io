@@ -1,0 +1,47 @@
+body{
+    background-image:url("assets/fondo_pahttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExuSXGmwq4v7emo1Fs6XfiwNwLa9DryEXIw&sgina.jpg");
+    
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+}
+.encabezado1{
+    text-align: center;
+    color: white;
+}
+
+
+.card-img-top{
+    width: 100%;         /* que ocupe todo el ancho de la card */
+    height: 200px;       /* altura fija para todas */
+    object-fit: cover; 
+}
+
+.encabezado2{
+    text-align: center;
+    height: 100px;
+    color: white;
+}
+
+.encabezado3{
+    text-align: center;
+    color: white;
+}
+
+.encabezado4{
+    text-align: center;
+}
+
+#CURSOS, #FORMULARIO, #QUIENES_SOMOS {
+  scroll-margin-top: 100px; /* Ajusta el valor a lo que necesites */
+}
+
+nav.navbar{
+    min-height: 100px;
+}
+
+nav.navbar .nav-link {
+  font-size: 40px; /* Cambia 1.5rem por el tamaño que prefieras */
+}
+
