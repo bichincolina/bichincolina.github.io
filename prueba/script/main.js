@@ -48,11 +48,11 @@ function getAge(edad) {
     let age = Object.fromEntries(formData)["edad1"];
 }
 function mayorDeEdad(e) {
-    if ( e>=0) {
-        alert("eres mayor de cero");
+    if ( e>=18) {
+        alert("eres mayor de edad");
         return true;
     } else {
-        alert("eres menor de cero");
+        alert("eres menor de edad");
         return false;
     }   
 }
@@ -62,11 +62,11 @@ document.getElementById("edad").addEventListener("submit", function (e){
     console.log(e);
     console.log(Object.fromEntries(formData)["edad1"]);
     if(mayorDeEdad(Object.fromEntries(formData)["edad1"]) ){
-        alert("eres mayor de cero");
-        console.log("eres mayor de cero");
+        alert("eres mayor de edad");
+        console.log("eres mayor de edad");
     } else {
-        alert("eres menor de cero");
-        console.log("eres menor de cero");
+        alert("eres menor de edad");
+        console.log("eres menor de edad");
     }});
 // const submit = document.querySelector("submit");
 // const timestamp = Date.now();
@@ -76,3 +76,4 @@ document.getElementById("edad").addEventListener("submit", function (e){
 // document.writeln("<p>la resta es: " + resta(50, 20) + "</p>");
 // document.writeln("<p>mi nombre es: " + nombreCompleto("bichi","colina") + "</p>");
 // document.writeln("<p> edad " + mayorDeEdad("su edad es") + "</p>");
+
