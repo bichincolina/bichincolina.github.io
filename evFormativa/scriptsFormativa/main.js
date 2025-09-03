@@ -4,7 +4,6 @@ var listamascot = [];
 // function getNom(){
 
 // }
-
 function guardar(nom, tip){
     listamascot.push({"nombre":nom, "tipo":tip})
     
