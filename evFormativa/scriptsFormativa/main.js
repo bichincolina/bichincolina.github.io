@@ -1,14 +1,15 @@
-
+var listanom = [];
+var listatip = [];
 
 // function getNom(){
 
 // }
 
-// function guardar(nom, tip){
-//     listanom.push(nom)
-//     listatip.push(listatip)
-//     document.writeln(listanom + "   " + listatip)
-// }
+function guardar(nom, tip){
+    listanom.push(nom)
+    listatip.push(tip)
+    
+}
 
 
 document.getElementById("guardarmascot").addEventListener("submit", function(e){
@@ -17,5 +18,6 @@ document.getElementById("guardarmascot").addEventListener("submit", function(e){
     console.log(e);
     console.log(Object.fromEntries(formData)["nomascot"]);
     console.log(Object.fromEntries(formData)["nomtip"]);
-
+    guardar(Object.fromEntries(formData)["nomascot"], Object.fromEntries(formData)["nomtip"])
+    
 });
