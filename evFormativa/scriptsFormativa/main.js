@@ -4,7 +4,6 @@ var listatip = [];
 // function getNom(){
 
 // }
-
 function guardar(nom, tip){
     listanom.push(nom)
     listatip.push(tip)
