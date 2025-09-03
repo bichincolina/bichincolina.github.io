@@ -9,17 +9,17 @@ function valCorreo(){
     }
 }
 function valPass(){
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex = /[!"#$%&/()=?¡°_\-]/;
     let pass = document.getElementById("pass").value;
     let pass2 = document.getElementById("pass2").value;
     if (pass != pass2){
         alert("Las contraseñas no coinciden");
         return false;
+    }if (!regex.test(document.getElementById("pass1").value)){
+        alert("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial");    
+        return false;
     }else{
         return true;
-    }
-    if (!regex.test(document.getElementById("pass1").value)){
-        alert("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial");
-        return false;
     }
 }
