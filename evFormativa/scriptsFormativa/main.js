@@ -1,12 +1,11 @@
-var listanom = [];
-var listatip = [];
+var listamascot = [];
+
 
 // function getNom(){
 
 // }
 function guardar(nom, tip){
-    listanom.push(nom)
-    listatip.push(tip)
+    listamascot.push({"nombre":nom, "tipo":tip})
     
 }
 
@@ -33,5 +32,7 @@ document.getElementById("guardarmascot").addEventListener("submit", function(e){
     console.log(Object.fromEntries(formData)["nomascot"]);
     console.log(Object.fromEntries(formData)["nomtip"]);
     guardar(Object.fromEntries(formData)["nomascot"], Object.fromEntries(formData)["nomtip"])
+    document.writeln(listamascot)
     
 });
+
