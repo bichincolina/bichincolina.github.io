@@ -13,7 +13,7 @@ function valPass(){
     const regex = /[!"#$%&/()=?¡°_\-]/;
     let pass = document.getElementById("pass").value;
     let pass2 = document.getElementById("pass2").value;
-    if (pass != pass2){
+    if (pass1 != pass2){
         alert("Las contraseñas no coinciden");
         return false;
     }if (!regex.test(document.getElementById("pass1").value)){
