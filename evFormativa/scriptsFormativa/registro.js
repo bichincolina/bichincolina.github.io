@@ -30,6 +30,12 @@ document.getElementById("Registro").addEventListener("submit", function(e){
     e.preventDefault();
     var formData = new FormData(e.target);
     console.log(e);
+    if (valCorreo() && valPass()){
+        alert("Registro exitoso");
+
+    }else{
+        alert("Error en el registro");
+    }
     console.log(Object.fromEntries(formData)["nombre"]);
     console.log(Object.fromEntries(formData)["correo"]);
     console.log(Object.fromEntries(formData)["pass1"]);
@@ -37,11 +43,6 @@ document.getElementById("Registro").addEventListener("submit", function(e){
     console.log(Object.fromEntries(formData)["telefono"]);
 });
 document.getElementById("Registro").addEventListener("submit", function(e){
-    if (valCorreo() && valPass()){
-        alert("Registro exitoso");
-        
-    }else{
-        alert("Error en el registro");
-    }
+    
 });
 var lista_mascot=[];
