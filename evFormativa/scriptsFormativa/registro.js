@@ -46,3 +46,4 @@ document.getElementById("Registro").addEventListener("submit", function(e){
     
 });
 var lista_mascot=[];
+
