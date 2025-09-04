@@ -1,9 +1,9 @@
 var listamascot = [];
 
-
+var users = [];
 // function getNom(){
 
-// }
+
 function guardar(nom, tip){
     listamascot.push({"nombre":nom, "tipo":tip})
     
@@ -16,14 +16,20 @@ function valCorreo(){
         alert("El correo debe terminar en @duocuc.cl");
         return false;
     }else{
+        users.push(correo);
         return true;
     }
 }
-
+// Listener de evento mail
 document.getElementById("loginForm").addEventListener("submit",function(e){
     e.preventDefault();
     var formData = new FormData(e.target);
-    
+    if (valCorreo()) {
+        console.log("Correo valido:", Object.fromEntries(formData)["correo"]);
+        console.log(users);
+    }else{
+        console.log("Correo invalido")
+    }
 })
 document.getElementById("guardarmascot").addEventListener("submit", function(e){
     e.preventDefault();
