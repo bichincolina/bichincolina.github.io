@@ -23,6 +23,7 @@ function valPass(){
         return true;
     }
 }
+
 function guardar_mascot(nom, tipo){
     lista_mascot
 }
@@ -41,9 +42,11 @@ document.getElementById("Registro").addEventListener("submit", function(e){
     console.log(Object.fromEntries(formData)["pass1"]);
     console.log(Object.fromEntries(formData)["pass2"]);
     console.log(Object.fromEntries(formData)["telefono"]);
+    
 });
 document.getElementById("Registro").addEventListener("submit", function(e){
     
 });
 var lista_mascot=[];
+
 
