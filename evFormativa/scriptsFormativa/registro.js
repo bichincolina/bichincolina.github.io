@@ -1,3 +1,5 @@
+users = [];
+
 function valCorreo(){
     let correo = document.getElementById("correo").value;
     var domCorreo = "@duocuc.cl";
@@ -5,27 +7,37 @@ function valCorreo(){
         alert("El correo debe terminar en @duocuc.cl");
         return false;
     }else{
-        return true;
-    }
+        return correo;
+    } 
 }
 function valPass(){
-    // const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const regex = /[!"#$%&/()=?¡°_\-]/;
     let pass1 = document.getElementById("pass1").value;
     let pass2 = document.getElementById("pass2").value;
     if (pass1 != pass2){
         alert("Las contraseñas no coinciden");
         return false;
-    }if (!regex.test(document.getElementById("pass1").value)){
+    }
+    if (!regex.test(pass2)){
         alert("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial");    
         return false;
     }else{
-        return true;
+        return pass2;
     }
 }
 
+function guardarUsuario(){
+    if (valCorreo() && valPass() != false){
+    let user = {
+        "correo": valCorreo(),
+        "contrasena": valPass()
+    }
+    users.push(user);
+}
+}
+
 function guardar_mascot(nom, tipo){
-    lista_mascot
+    lista_mascot.push({"nombre":nom,"tipo":tipo});
 }
 document.getElementById("Registro").addEventListener("submit", function(e){
     e.preventDefault();
