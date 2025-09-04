@@ -16,10 +16,10 @@ function valCorreo(){
         alert("El correo debe terminar en @duocuc.cl");
         return false;
     }else{
-        users.push(correo);
-        return true;
+        return correo;
     }
 }
+
 // Listener de evento mail
 document.getElementById("loginForm").addEventListener("submit",function(e){
     e.preventDefault();
