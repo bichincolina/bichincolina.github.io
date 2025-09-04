@@ -11,7 +11,7 @@ function valCorreo(){
 function valPass(){
     // const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const regex = /[!"#$%&/()=?¡°_\-]/;
-    let pass = document.getElementById("pass").value;
+    let pass1 = document.getElementById("pass1").value;
     let pass2 = document.getElementById("pass2").value;
     if (pass1 != pass2){
         alert("Las contraseñas no coinciden");
@@ -23,3 +23,25 @@ function valPass(){
         return true;
     }
 }
+function guardar_mascot(nom, tipo){
+    lista_mascot
+}
+document.getElementById("Registro").addEventListener("submit", function(e){
+    e.preventDefault();
+    var formData = new FormData(e.target);
+    console.log(e);
+    console.log(Object.fromEntries(formData)["nombre"]);
+    console.log(Object.fromEntries(formData)["correo"]);
+    console.log(Object.fromEntries(formData)["pass1"]);
+    console.log(Object.fromEntries(formData)["pass2"]);
+    console.log(Object.fromEntries(formData)["telefono"]);
+});
+document.getElementById("Registro").addEventListener("submit", function(e){
+    if (valCorreo() && valPass()){
+        alert("Registro exitoso");
+        
+    }else{
+        alert("Error en el registro");
+    }
+});
+var lista_mascot=[];
