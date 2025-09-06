@@ -1,3 +1,4 @@
+// Listas de usuarios y mascotas
 var users = [];
 var listamascot = [];
 // Funcion validar correo
@@ -27,21 +28,36 @@ function valPass(){
         return pass2;
     }
 }
-// Funcion guardar usuario **FALTA TERMINAR**
+// Funcion guardar usuario 
 function guardarUsuario(){
-    if (valCorreo() && valPass() != null){
+    const correo = valCorreo();
+    const contrasena = valPass();
+
+    if (correo && contrasena){
     let user = {
-        "correo": valCorreo(),
-        "contrasena": valPass()
+        "nombre": document.getElementById("nombre").value,
+        "correo": correo,
+        "contrasena": contrasena,
+        "telefono": document.getElementById("telefono").value
     }
     users.push(user);
-}
+    }
 }
 // Funcion guardar mascota **CAMBIAR ID**
 function guardar_mascot(nom, tipo){
     lista_mascot.push({"nombre":nom,"tipo":tipo});
 }
+
+//Listener registro usuario
+document.getElementById("Registro").addEventListener("submit",function(e){
+    e.preventDefault();
+    guardarUsuario();
+    window.localStorage.setItem("users", JSON.stringify(users));
+    console.log("usuario guardado");
+    console.log(users);
+});
 // Listener datos guardados (prueba)
+/*
 document.getElementById("Registro").addEventListener("submit", function(e){
     e.preventDefault();
     var formData = new FormData(e.target);
@@ -58,7 +74,7 @@ document.getElementById("Registro").addEventListener("submit", function(e){
     console.log(Object.fromEntries(formData)["pass2"]);
     console.log(Object.fromEntries(formData)["telefono"]);
     
-});
+});*/
 // Listener datos mascota **RECTIFICAR ID**
 document.getElementById("guardarmascot").addEventListener("submit", function(e){
     e.preventDefault();
