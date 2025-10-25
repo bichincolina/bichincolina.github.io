@@ -1,26 +1,37 @@
-@import "tailwindcss";
+/* Bootstrap global */
+@import "bootstrap/dist/css/bootstrap.min.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Navbar personalizada: fondo y contraste */
+.custom-navbar {
+  background-color: rgba(44, 62, 80, 0.95);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Asegura contraste y hover */
+.custom-navbar .nav-link {
+  color: #eaecef;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Toggler visible en navbar oscura */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255,255,255,.25);
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg); /* Bootstrap 5 usa esta var */
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Marca */
+.brandNav {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Hero helper (opcional) */
+.hero-section .btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

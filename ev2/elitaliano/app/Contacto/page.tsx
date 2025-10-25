@@ -1,6 +1,6 @@
 import React from "react";
-import Principal from "./principal";
+import Contacto from "./contacto";
 
 export default function Page() {
-  return <Principal />;
+  return <Contacto />;
 }

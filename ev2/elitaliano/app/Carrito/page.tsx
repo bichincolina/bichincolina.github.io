@@ -1,6 +1,6 @@
 import React from "react";
-import Principal from "./principal";
+import CarritoView from "./carrito";
 
 export default function Page() {
-  return <Principal />;
+  return <CarritoView />;
 }
