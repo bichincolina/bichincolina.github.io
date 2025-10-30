@@ -41,7 +41,8 @@ export default function Navbar() {
             <li className="nav-item"><Link className={`nav-link ${isActive("/Login")}`} href="/Login">Login</Link></li>
             <li className="nav-item"><Link className={`nav-link ${isActive("/Producto")}`} href="/Producto">Productos</Link></li>
             <li className="nav-item"><Link className={`nav-link ${isActive("/Contacto")}`} href="/Contacto">Contacto</Link></li>
-            {/* Mobile: sin id para evitar duplicados */}
+            <li className="nav-item">
+            <Link className={`nav-link ${isActive("/Ofertas")}`} href="/Ofertas">Ofertas</Link></li>
             <li className="nav-item d-lg-none mt-2">
               <Link href="/Carrito" className="icon-cart d-flex align-items-center text-white text-decoration-none">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
