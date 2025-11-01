@@ -52,7 +52,6 @@ const Producto: React.FC<Props> = ({ products }) => {
                     alt={p.nombre}
                     style={{ objectFit: "cover" }}
                   />
-
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{p.nombre}</h5>
                     <p className="card-text mb-2 small text-muted">{p.descripcion}</p>
@@ -68,7 +67,6 @@ const Producto: React.FC<Props> = ({ products }) => {
                     ) : (
                       <p className="card-text fw-bold mb-3">{CLP(p.precio)}</p>
                     )}
-
                     <button
                       id="agregarCarro"
                       className="btn btn-dark w-100 mt-auto"
@@ -76,7 +74,6 @@ const Producto: React.FC<Props> = ({ products }) => {
                         addToCart({
                           id: p.id,
                           nombre: p.nombre,
-                          // 👇 al carrito entra el precio correcto (descuento si aplica)
                           precio: precioDescuento,
                           imagen: p.imagen.startsWith("/") ? p.imagen : `/${p.imagen}`,
                           descripcion: p.descripcion,
