@@ -227,7 +227,7 @@ const Registro: React.FC = () => {
                       </Alert>
                     )}
                     <div className="d-grid mt-4">
-                      <Button type="submit" variant="secondary" size="lg">
+                      <Button className="botonReg" type="submit" variant="secondary" size="lg">
                         Registrarse
                       </Button>
                     </div>
