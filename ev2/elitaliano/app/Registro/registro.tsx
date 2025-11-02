@@ -107,7 +107,7 @@ const Registro: React.FC = () => {
                             onChange={handleChange}
                             isInvalid={!!errors.nombreReg}
                           />
-                          <Form.Control.Feedback type="invalid">
+                          <Form.Control.Feedback className="msjNomReg" type="invalid">
                             {errors.nombreReg}
                           </Form.Control.Feedback>
                         </Form.Group>
@@ -126,7 +126,7 @@ const Registro: React.FC = () => {
                             onChange={handleChange}
                             isInvalid={!!errors.correoReg}
                           />
-                          <Form.Control.Feedback type="invalid">
+                          <Form.Control.Feedback className="msjCorreoReg" type="invalid">
                             {errors.correoReg}
                           </Form.Control.Feedback>
                         </Form.Group>
@@ -147,7 +147,7 @@ const Registro: React.FC = () => {
                             onChange={handleChange}
                             isInvalid={!!errors.pass1}
                           />
-                          <Form.Control.Feedback type="invalid">
+                          <Form.Control.Feedback className="msjPass1Reg" type="invalid">
                             {errors.pass1}
                           </Form.Control.Feedback>
                         </Form.Group>
@@ -166,7 +166,7 @@ const Registro: React.FC = () => {
                             onChange={handleChange}
                             isInvalid={!!errors.pass2}
                           />
-                          <Form.Control.Feedback type="invalid">
+                          <Form.Control.Feedback className="msjPass2Reg" type="invalid">
                             {errors.pass2}
                           </Form.Control.Feedback>
                         </Form.Group>
