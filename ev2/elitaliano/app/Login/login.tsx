@@ -96,7 +96,7 @@ const Login: React.FC = () => {
 
                   {/* Replaced <p id="mensajeLog"> with <Alert> */}
                   {mensajeLog && (
-                    <Alert variant={mensajeError ? 'danger' : 'success'} className="text-center">
+                    <Alert variant={mensajeError ? 'danger' : 'success'} className="mensajeLog text-center">
                       {mensajeLog}
                     </Alert>
                   )}
