@@ -102,7 +102,7 @@ const Login: React.FC = () => {
                   )}
 
                   {/* Replaced <button> with <Button> */}
-                  <Button type="submit" variant="secondary" size="lg" className="w-100">
+                  <Button type="submit" variant="secondary" size="lg" className="botonLog w-100">
                     Login
                   </Button>
                 </Form>
