@@ -66,6 +66,7 @@ const Login: React.FC = () => {
                     className="mb-3"
                   >
                     <Form.Control
+                      id="logCorreo"
                       type="text"
                       name="correoLog"
                       minLength={10}
@@ -83,6 +84,7 @@ const Login: React.FC = () => {
                     className="mb-4"
                   >
                     <Form.Control
+                      id="password12#"
                       type="password"
                       name="passLog"
                       minLength={4}
@@ -96,13 +98,13 @@ const Login: React.FC = () => {
 
                   {/* Replaced <p id="mensajeLog"> with <Alert> */}
                   {mensajeLog && (
-                    <Alert variant={mensajeError ? 'danger' : 'success'} className="text-center">
+                    <Alert variant={mensajeError ? 'danger' : 'success'} id="mensajeLog" className="mensajeLog text-center">
                       {mensajeLog}
                     </Alert>
                   )}
 
                   {/* Replaced <button> with <Button> */}
-                  <Button type="submit" variant="secondary" size="lg" className="w-100">
+                  <Button id="logBoton" type="submit" variant="secondary" size="lg" className="botonLog w-100">
                     Login
                   </Button>
                 </Form>
